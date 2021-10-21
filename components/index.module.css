@@ -81,13 +81,14 @@
 }
 
 .stages {
-    padding: 2% 4% 4% 4%;
+    padding: 4% 0;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    flex-wrap: wrap;
 }
 
 .stages span {
-    margin: 0 8px;
+    margin: 4px 8px;
     padding: 4px 8px;
     border-radius: 5px;
     cursor: pointer;
@@ -96,6 +97,7 @@
 
 .searchBar {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -104,4 +106,21 @@
 .button {
     background-color: transparent;
     border: 0;
+}
+
+.input {
+    margin: 2em 1em;
+    width: 95%;
+}
+
+@media screen and (max-width: 1200px) {
+    .filterSection {
+        flex-direction: column;
+    }
+    .topics {
+        width: 100%;
+    }
+    .categories {
+        justify-content: flex-end;
+    }
 }
